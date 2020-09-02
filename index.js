@@ -31,7 +31,7 @@ app.get('/users', function (req, res) {
     function (err, result) {
       if (err) {
           console.log(err);
-          res.status(400).send(err);
+          return res.status(400).send(err);
       }
       res.status(200).send(result.rows);
   });
